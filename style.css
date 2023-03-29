@@ -1,0 +1,13 @@
+.container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+h4{
+    text-align: center;
+}
+
+.formDiv{
+    flex-direction: row;
+}
