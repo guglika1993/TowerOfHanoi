@@ -12,11 +12,11 @@ form.addEventListener("submit", function(event){
     const teqsti = parseInt(input.value);
     n = isNaN(parseInt(teqsti));
 if(n){
-    sia.innerHTML = `<p id="defaultText">აუცილებელია შეიყვანოთ რიცხვი</p>`;
+    sia.innerHTML = `<p id="defaultText">Вы не вводили число</p>`;
     }
 else{
     sia.innerHTML = `<p id="defaultText"></p>`;
-    hanoi(teqsti, "პირველი", "მეორე", "მესამე");
+    hanoi(teqsti, "перв", "втор", "трет");
     }
     input.value = "";
     input.focus();
@@ -24,7 +24,7 @@ else{
 });
 
 reset.addEventListener("click", function(){
-    sia.innerHTML = `<p id="defaultText">სია ცარიელია</p>`;
+    sia.innerHTML = `<p id="defaultText">список пустой</p>`;
     input.value = "";
     input.focus();
     reset.disabled = true;
@@ -44,7 +44,7 @@ function hanoi(n, start, temporal, end ){
     else{
         hanoi(n-1, start, end, temporal);
         add();
-        sia.lastChild.innerText = `გადაწიე დისკი ნომერი ${n} ${start}დან ${end} სვეტზე`;
+        sia.lastChild.innerText = `переноси диск ${n} с ${start}ой стольбы к ${end}ую`;
         hanoi(n-1, temporal, start, end);
         defaultText.remove();
         numb++;
